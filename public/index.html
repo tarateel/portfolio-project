@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cooking Traditions</title>
+    <link rel='stylesheet' type='text/CSS' href="css/index.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montaga&display=swap" rel="stylesheet">
+    <!-- GSAP/TweenMax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div class="gsap-container">
+      <header>
+        <div class="nav-bar">
+          <h1>Cooking Traditions</h1>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+          <img
+            src="img/nav-hamburger.png"
+            alt="nav-icon"
+            class="navigation-button active hamburger-open"
+          />
+          <img
+            src="img/nav-hamburger-close.png"
+            alt="the X icon"
+            class="navigation-button hamburger-close"
+          />
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+          <div class="nav-tags hidden">
+            <nav>
+              <a href="./index.html" class="nav-link">Home</a>
+              <a href="./demo.html" class="nav-link">Demo</a>
+              <a href="./login.html" class="nav-link">Login</a>
+              <a href="./about.html" class="nav-link">About</a>
+            </nav>
+          </div>
+          <!--nav-tags hidden-->
+        </div>
+      </header>
+        <!--nav-bar-->
+        <div class="main-image">
+          <picture>
+            <source media="(min-width: 2560px)" srcset="img/bkgrnd-img-2560.png">
+            <source media="(max-width:1440px)" srcset="img/bkgrnd-img-1440.png">
+            <source media="(max-width:1280px)" srcset="img/bkgrnd-img-1280.png">
+            <source media="(max-width:1024px)" srcset="img/bkgrnd-img-1024.png">
+            <source media="(max-width:992px)" srcset="img/bkgrnd-img-992.png">
+            <source media="(max-width:768px)" srcset="img/bkgrnd-img-768.png">
+            <source media="(max-width:500px)" srcset="img/bkgrnd-img-500.png">
+            <source media="(max-width:480px)" srcset="img/bkgrnd-img-480.png">
+            <source media="(max-width:320px)" srcset="img/bkgrnd-img-320.png">
+            <img src="img/bkgrnd-img.png" alt="rustic tabletop with cutting board, cooking tools, and assorted spices" style="width: 100%" />
+          </picture>
+          <!-- <img
+            class="jumbotron-image"
+            src="img/bkgrnd-img-1280.png"
+            alt="rustic tabletop with cutting board, cooking tools, and assorted spices"
+          /> -->
+          <h2 class="title">
+            Cooking<br />
+            Traditions
+          </h2>
+        </div>
+        <!--main-image-->
+      
+      
+    </div>
+    <!--gsap-container-->
+    <script src="js/index.js"></script>
   </body>
 </html>
